@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Acronyms</string>
+    <string name="etMeaning">Acronym</string>
+    <string name="btnSearch">LOOK UP</string>
+    <string name="acronym">Acronym</string>
+    <string name="look_up">Look Up</string>
+    <string name="error_empty">Can not be empty</string>
+</resources>

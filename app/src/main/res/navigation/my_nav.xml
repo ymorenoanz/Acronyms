@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentLookUp">
+    <fragment
+        android:id="@+id/fragmentLookUp"
+        android:name="com.yaritzama.acronyms.presentation.acronymlookup.FragmentLookUp"
+        android:label="FragmentLookUp"
+        tools:layout="@layout/fragment_lookup">
+        <action
+            android:id="@+id/action_fragmentLookUp_to_fragmentAcronym"
+            app:destination="@id/fragmentAcronym" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentAcronym"
+        android:name="com.yaritzama.acronyms.presentation.acronymmeaninglist.FragmentAcronym"
+        android:label="FragmentAcronym"
+        tools:layout="@layout/fragment_meaning_list">
+        <argument
+            android:name="acronymMeaning"
+            app:argType="com.yaritzama.acronyms.domain.models.AcronymMeaningModel[]" />
+        <argument
+            android:name="acronym"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_fragmentAcronym_to_fragmentLookUp"
+            app:destination="@id/fragmentLookUp" />
+    </fragment>
+</navigation>
